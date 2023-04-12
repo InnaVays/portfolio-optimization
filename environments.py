@@ -143,7 +143,7 @@ class CardGameEnv(py_environment.PyEnvironment):
                 return ts.transition(
                     self._state, reward=reward, discount=1)
             except Exception as e:
-                print("ERRORRRRRR!!!!!!!!!!!!!!!!")
+                print("ERROR!")
                 print(self._state)
                 print(reward)
                 print(self.step_reward, self.current_value, self.previous_value)
@@ -231,3 +231,4 @@ class CardGameEnv(py_environment.PyEnvironment):
         for i,c in enumerate(self.current_stock_money_distribution):
             normal.append(c/self.current_value)
         return normal
+    
