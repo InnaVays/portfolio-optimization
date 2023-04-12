@@ -24,6 +24,7 @@ class MarkowitzPolicy:
         return action
 
     def init_portfolios(self):
+        # randamly assigned initial weights
         if FIXED_PORTFOLIO:
             ps = pd.read_csv("portfolios_sample.csv")
         else:
